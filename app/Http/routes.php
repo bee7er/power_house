@@ -20,8 +20,6 @@ Route::get('home', 'HomeController@index');
 Route::get('expressions', 'PagesController@expressions');
 Route::get('template', 'PagesController@template');
 Route::get('movin', 'PagesController@movin');
-Route::get('gif/{id}', 'GifController@show');
-Route::get('image/{id}', 'ImageController@show');
 
 Route::controllers([
     'auth' => 'Auth\AuthController',
@@ -77,7 +75,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('content/{id}/destroy', 'Admin\ContentController@destroy');
     Route::get('content/data', 'Admin\ContentController@data');
     Route::resource('content', 'Admin\ContentController');
-
     # Users
     Route::get('user/data', 'Admin\UserController@data');
     Route::get('user/{user}/show', 'Admin\UserController@show');
