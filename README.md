@@ -1,1 +1,4 @@
-# russ_laravel_2018
+Website for the Powerhouse Plugins
+
+Written in Laravel PHP
+

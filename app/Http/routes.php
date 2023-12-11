@@ -12,7 +12,6 @@ Route::pattern('slug', '[0-9a-z-_]+');
 /***************    Site routes  **********************************/
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@index');
-Route::get('expressions', 'PagesController@expressions');
 // NB Using the following as an alias to video controller
 Route::get('/{name}', 'VideoController@show');
 Route::get('video/{name}', 'VideoController@show');
