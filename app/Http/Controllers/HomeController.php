@@ -45,8 +45,6 @@ class HomeController extends Controller
 	 */
 	public function index(Request $request)
 	{
-		$category = trim($request->input('category'));
-
 		$builder = Resource::select(
 			array(
 				'resources.id',
@@ -70,31 +68,6 @@ class HomeController extends Controller
 		)
 			->orderBy("resources.seq")
 			->limit(999);
-
-		$isShowAllResources = true;
-		if ("" != $category) {
-			// Ok, may not show all
-			$isShowAllResources = false;
-			switch($category) {
-				case 'animator':
-					$builder->where("resources.isAnimator", "=", "1");
-					break;
-				case 'director':
-					$builder->where("resources.isDirector", "=", "1");
-					break;
-				case 'personal':
-					$builder->where("resources.isPersonal", "=", "1");
-					break;
-				case 'commercial':
-					$builder->where("resources.isCommercial", "=", "1");
-					break;
-				default:
-					// All resources to be shown
-					$isShowAllResources = true;
-					// Exclude certain resources if not to be included here
-					$builder->where("resources.includeInAll", "=", "1");
-			}
-		}
 
 		$resources = $builder->get();
 
@@ -160,7 +133,7 @@ class HomeController extends Controller
 			$loggedIn = true;
 		}
 
-		return view('pages.home', compact('resources', 'isShowAllResources', 'aboutText', 'logosText', 'contactText', 'notices', 'loggedIn'));
+		return view('pages.home', compact('resources', 'aboutText', 'logosText', 'contactText', 'notices', 'loggedIn'));
 	}
 
 }

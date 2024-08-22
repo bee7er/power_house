@@ -10,14 +10,6 @@
                                                                            onmouseout="$(this).removeClass('white-link-hover')">work</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span onclick="gotoPage('about');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">about</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span  onclick="gotoPage('contact');" onmouseover="$(this).addClass('white-link-hover')"
                                                                  onmouseout="$(this).removeClass('white-link-hover')">contact</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span onclick="gotoPage('news');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">news</span></div>
     </div>
-    <div class="hidden-xs hidden-sm col-md-12 col-lg-12 sub-header-block">
-        <div class="header-menu-right"><span class="filter-label">Filter:</span><span id="all" onclick="filterByCategory('all');"
-                                                                           onmouseover="$(this).addClass('white-link-hover');"
-                                                                           onmouseout="$(this).removeClass('white-link-hover')">all</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span id="animator" onclick="filterByCategory('animator');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">animator</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span id="director" onclick="filterByCategory('director');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">director</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span  id="personal" onclick="filterByCategory('personal');" onmouseover="$(this).addClass('white-link-hover')"
-                                                                 onmouseout="$(this).removeClass('white-link-hover')">personal</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span id="commercial" onclick="filterByCategory('commercial');" onmouseover="$(this).addClass('white-link-hover')"
-                                                                 onmouseout="$(this).removeClass('white-link-hover')">commercial</span>
-        </div>
-    </div>
     <div class="hidden-xs col-sm-12 hidden-md hidden-lg header-block">
         <span onclick="gotoPage('home');" onmouseover="$(this).addClass('white-link-hover');"
               onmouseout="$(this).removeClass('white-link-hover')">work</span>

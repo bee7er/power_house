@@ -7,18 +7,18 @@
 
     <title>Powerhouse Industries :: @section('title') @show</title>
     @section('meta_keywords')
-        <meta name="keywords" content="animation, animator, director, creator, designer"/>
+        <meta name="keywords" content="plugin, utility"/>
     @show @section('meta_author')
         <meta name="author" content="Brian Etheridge"/>
     @show @section('meta_description')
-        <meta name="description" content="Russ Etheridge is a free lance animator."/>
+        <meta name="description" content="Powerhouse Industries provide plugins and utilities to the masses"/>
     @show
         <meta property="og:title" content="Russ Etheridge">
         <meta property="og:image" content="/img/thumbs/armstrong_hv.jpg">
-        <meta property="og:description" content="Russ Etheridge is a freelance Animator, Director and Designer. Please get in touch for more info and availability!">
+        <meta property="og:description" content="Powerhouse Industries provide plugins and utilities to the masses">
 
-		<link href="{{ asset('css/site.css?v5') }}" rel="stylesheet">
-        <script src="{{ asset('js/site.js?v5') }}"></script>
+		<link href="{{ asset('css/site.css?v6') }}" rel="stylesheet">
+        <script src="{{ asset('js/site.js?v6') }}"></script>
 
     @yield('styles')
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
