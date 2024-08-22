@@ -27,15 +27,25 @@
         <table class="logo-menu-table">
             <tbody>
             <tr>
-                <td class="logo-menu-table-left">
-                    <span class="white-link" onclick="gotoPage('home');" onmouseover="$(this).addClass('white-link-hover');"
-                          onmouseout="$(this).removeClass('white-link-hover')">work</span>
+                <td class="logo-menu-table-right">
+                    <span class="white-link" onclick="gotoPage('home');" onmouseover="$(this).addClass('white-link-hover')"
+                          onmouseout="$(this).removeClass('white-link-hover')
+                                                    ">work</span>
                 </td>
-                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png"
-                    /></td>
+                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
+                <td class="logo-menu-table-left">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
                 <td class="logo-menu-table-right">
                     <span class="white-link" onclick="gotoPage('about');" onmouseover="$(this).addClass('white-link-hover')"
-                          onmouseout="$(this).removeClass('white-link-hover')">about</span>
+                          onmouseout="$(this).removeClass('white-link-hover')
+                                                    ">about</span>
+                </td>
+                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
+                <td class="logo-menu-table-left">
+                    &nbsp;
                 </td>
             </tr>
             <tr>
