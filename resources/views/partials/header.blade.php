@@ -23,22 +23,6 @@
         <span onclick="gotoPage('news');" onmouseover="$(this).addClass('white-link-hover')"
               onmouseout="$(this).removeClass('white-link-hover')">news</span>
     </div>
-    <div class="hidden-xs col-sm-12 hidden-md hidden-lg sub-header-block"><span class="filter-label">Filter:</span>
-        <span id="all" onclick="filterByCategory('all');" onmouseover="$(this).addClass('white-link-hover');"
-              onmouseout="$(this).removeClass('white-link-hover')">all</span>
-        <img class="square" src="{{config('app.base_url')}}img/square.png" />
-        <span  id="animator" onclick="filterByCategory('animator');" onmouseover="$(this).addClass('white-link-hover')"
-              onmouseout="$(this).removeClass('white-link-hover')">animator</span>
-        <img class="square" src="{{config('app.base_url')}}img/square.png" />
-        <span  id="director" onclick="filterByCategory('director');" onmouseover="$(this).addClass('white-link-hover')"
-              onmouseout="$(this).removeClass('white-link-hover')">director</span>
-        <img class="square" src="{{config('app.base_url')}}img/square.png" />
-        <span id="personal" onclick="filterByCategory('personal');" onmouseover="$(this).addClass('white-link-hover')"
-              onmouseout="$(this).removeClass('white-link-hover')">personal</span>
-        <img class="square" src="{{config('app.base_url')}}img/square.png" />
-        <span id="commercial" onclick="filterByCategory('commercial');" onmouseover="$(this).addClass('white-link-hover')"
-              onmouseout="$(this).removeClass('white-link-hover')">commercial</span>
-    </div>
     <div class="col-xs-12 hidden-sm hidden-md hidden-lg header-block">
         <table class="logo-menu-table">
             <tbody>
@@ -74,42 +58,6 @@
                 <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
                 <td class="logo-menu-table-left">
                     &nbsp;
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="col-xs-12 hidden-sm hidden-md hidden-lg sub-header-block"><span class="filter-label">Filter:</span>
-        <table class="logo-menu-table">
-            <tbody>
-            <tr>
-                <td class="logo-menu-table-left">
-                    <span id="all" class="white-link" onclick="filterByCategory('all');" onmouseover="$(this).addClass('white-link-hover');"
-                          onmouseout="$(this).removeClass('white-link-hover')">all</span>
-                </td>
-                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png"
-                    /></td>
-                <td class="logo-menu-table-right">
-                    <span id="animator" class="white-link" onclick="filterByCategory('animator');" onmouseover="$(this).addClass('white-link-hover')"
-                          onmouseout="$(this).removeClass('white-link-hover')">animator</span>
-                </td>
-            </tr>
-            <tr>
-                <td class="logo-menu-table-right">
-                    <span id="director" class="white-link" onclick="filterByCategory('director');" onmouseover="$(this).addClass('white-link-hover')"
-                          onmouseout="$(this).removeClass('white-link-hover')">director</span>
-                </td>
-                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
-                <td class="logo-menu-table-left">
-                    <span id="personal" class="white-link" onclick="filterByCategory('personal');" onmouseover="$(this).addClass('white-link-hover')"
-                          onmouseout="$(this).removeClass('white-link-hover')
-                                                    ">personal</span>
-                </td>
-                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
-                <td class="logo-menu-table-left">
-                    <span id="commercial" class="white-link" onclick="filterByCategory('commercial');" onmouseover="$(this).addClass('white-link-hover')"
-                          onmouseout="$(this).removeClass('white-link-hover')
-                                                    ">commercial</span>
                 </td>
             </tr>
             </tbody>
