@@ -18,7 +18,7 @@
 
         <div class="container">
             <main>
-                Under construction
+                Coming soon
             </main>
 
             <hr>
