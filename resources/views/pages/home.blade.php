@@ -62,13 +62,21 @@
         </div>
     @endif
 
-    <div id="about" class="panel-title">about</div>
-    <div id="about-row-container" class="row about-row-container" style="padding:0;">
-        <div><img alt="" src="img/russ_headshot.jpg" class="headshot"></div>
+    @if($aboutText)
+        <div id="about" class="panel-title">about</div>
+        <div id="about-row-container" class="row about-row-container" style="padding:0;">
+            <div><img alt="" src="img/russ_headshot.jpg" class="headshot"></div>
 
-        {!! $aboutText !!}
+            {!! $aboutText !!}
 
-    </div>
+        </div>
+
+        <div class="go-top" onclick="scrollToAnchor('top');">
+            <div id="goTopHand-about" class="bodymovin-hand" onmouseover="startBodymovinHand(ABOUT);"
+                 onmouseout="stopBodymovinHand(ABOUT);">
+            </div>
+        </div>
+    @endif
 
     @if($logosText)
         <div id="about-row-container" class="row about-row-container" style="padding:0;">
@@ -77,12 +85,6 @@
 
         </div>
     @endif
-
-    <div class="go-top" onclick="scrollToAnchor('top');">
-        <div id="goTopHand-about" class="bodymovin-hand" onmouseover="startBodymovinHand(ABOUT);"
-             onmouseout="stopBodymovinHand(ABOUT);">
-        </div>
-    </div>
 
     <div id="contact" class="panel-title">contact</div>
     <div class="row contact-row-container">

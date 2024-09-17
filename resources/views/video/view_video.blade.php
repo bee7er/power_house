@@ -8,11 +8,6 @@
                 {!! $error !!}
             </div>
         </div>
-        <div class="go-top" onclick="scrollToAnchor('top');">
-            <div id="goTopHand-work" class="bodymovin-hand" onmouseover="startBodymovinHand(WORK);"
-                 onmouseout="stopBodymovinHand(WORK);">
-            </div>
-        </div>
     @else
 
         {!! $video->rendered !!}

@@ -4,20 +4,14 @@
 <div class="row logo-menu-container">
     <div class="hidden-xs hidden-sm col-md-12 col-lg-12 header-block">
         <div class="header-menu-left"><span onclick="gotoPage
-        ('home');">Powerhouse Industries</span></div>
+        ('home');"><img class="header-logo" src="{{config('app.base_url')}}img/phi_banner.png" style="XXXborder: 1px solid red;" /></span></div>
         <div class="header-menu-right"><span onclick="gotoPage('home');"
                                                                            onmouseover="$(this).addClass('white-link-hover');"
-                                                                           onmouseout="$(this).removeClass('white-link-hover')">work</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span onclick="gotoPage('about');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">about</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span onclick="gotoPage('news');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">news</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span  onclick="gotoPage('contact');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">contact</span></div>
+                                                                           onmouseout="$(this).removeClass('white-link-hover')">software</span><img class="square" src="{{config('app.base_url')}}img/square.png" /><span  onclick="gotoPage('contact');" onmouseover="$(this).addClass('white-link-hover')" onmouseout="$(this).removeClass('white-link-hover')">contact</span></div>
     </div>
     <div class="hidden-xs col-sm-12 hidden-md hidden-lg header-block">
         <span onclick="gotoPage('home');" onmouseover="$(this).addClass('white-link-hover');"
-              onmouseout="$(this).removeClass('white-link-hover')">work</span>
-        <img class="square" src="{{config('app.base_url')}}img/square.png" />
-        <span onclick="gotoPage('about');" onmouseover="$(this).addClass('white-link-hover')"
-              onmouseout="$(this).removeClass('white-link-hover')">about</span>
-        <img class="square" src="{{config('app.base_url')}}img/square.png" />
-        <span onclick="gotoPage('news');" onmouseover="$(this).addClass('white-link-hover')"
-              onmouseout="$(this).removeClass('white-link-hover')">news</span>
+              onmouseout="$(this).removeClass('white-link-hover')">software</span>
         <img class="square" src="{{config('app.base_url')}}img/square.png" />
         <span onclick="gotoPage('contact');" onmouseover="$(this).addClass('white-link-hover')"
               onmouseout="$(this).removeClass('white-link-hover')">contact</span>
@@ -29,29 +23,7 @@
                 <td class="logo-menu-table-right">
                     <span class="white-link" onclick="gotoPage('home');" onmouseover="$(this).addClass('white-link-hover')"
                           onmouseout="$(this).removeClass('white-link-hover')
-                                                    ">work</span>
-                </td>
-                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
-                <td class="logo-menu-table-left">
-                    &nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td class="logo-menu-table-right">
-                    <span class="white-link" onclick="gotoPage('about');" onmouseover="$(this).addClass('white-link-hover')"
-                          onmouseout="$(this).removeClass('white-link-hover')
-                                                    ">about</span>
-                </td>
-                <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
-                <td class="logo-menu-table-left">
-                    &nbsp;
-                </td>
-            </tr>
-            <tr>
-                <td class="logo-menu-table-right">
-                    <span class="white-link" onclick="gotoPage('news');" onmouseover="$(this).addClass
-                    ('white-link-hover')"
-                          onmouseout="$(this).removeClass('white-link-hover')">news</span>
+                                                    ">software</span>
                 </td>
                 <td class="square-vertical logo-menu-table-center"><img src="{{config('app.base_url')}}img/square.png" /></td>
                 <td class="logo-menu-table-left">

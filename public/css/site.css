@@ -20172,7 +20172,8 @@ label {
 }
 
 body {
-  background-color: #002DFF;
+  background-color: #000;
+  background-image: url("../img/smudgesbg_tile.jpg");
   font-family: "Roboto", "Verdana", sans-serif;
   color: #000;
 }
@@ -20235,12 +20236,21 @@ body {
 }
 
 .header-menu-right {
+  padding-top: 114px;
   text-align: right;
   float: right;
 }
 
 .filter-label {
   padding-right: 25px;
+}
+
+@media (max-width: 1450px) {
+  .header-menu-right {
+    padding-top: 10px;
+    text-align: center;
+    clear: both;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -20315,7 +20325,8 @@ body {
   margin: 20px auto 40px auto;
   border: 10px solid black;
   padding: 18px;
-  background-color: #002DFF;
+  /*background-color: #002DFF;*/
+  background-image: url("../img/smudgesbg_tile.jpg");
   color: #fff;
   width: 70%;
   text-align: center;
@@ -20390,7 +20401,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-top: 300px;
+  margin-top: 200px;
   border: 0;
   border-top: 10px solid #000;
   background-color: #fff;
@@ -20458,9 +20469,8 @@ body {
 .work-image,
 .details-work-image,
 .title-work-image {
-  border: 5px solid #002DFF;
+  border: 5px transparent;
   margin: 0;
-  background-color: #000;
   padding: 10px;
 }
 
@@ -20542,7 +20552,7 @@ body {
   color: #fff;
   text-align: center;
   font-size: 48px;
-  margin: 300px 0 40px 0;
+  margin: 200px 0 40px 0;
 }
 
 .template-title,
@@ -20579,7 +20589,7 @@ body {
   padding-bottom: 6px;
   border-bottom: 10px;
   border-bottom-style: solid;
-  border-bottom-color: black;
+  border-bottom-color: #fff;
   cursor: pointer;
 }
 
