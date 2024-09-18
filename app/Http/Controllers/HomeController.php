@@ -74,6 +74,8 @@ class HomeController extends Controller
 		if ($resources->count() > 0) {
 			// Derive the hover title image for each remaining entry and add it to the object
 			foreach ($resources as &$resource) {
+				// Grab the first entry, it is the title entry
+				$titleResource = $resources->first();
 				// If we are to use the hover then generate the necessary HTML
 				$resource->hoverActions = '';
 				if ($resource->useThumbHover) {
@@ -133,7 +135,7 @@ class HomeController extends Controller
 			$loggedIn = true;
 		}
 
-		return view('pages.home', compact('resources', 'aboutText', 'logosText', 'contactText', 'notices', 'loggedIn'));
+		return view('pages.home', compact('resources', 'titleResource', 'aboutText', 'logosText', 'contactText', 'notices', 'loggedIn'));
 	}
 
 }

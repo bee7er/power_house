@@ -20333,6 +20333,11 @@ body {
   font-size: 20px;
 }
 
+.footer-row-container {
+  background-color: #fff;
+  background-image: none;
+}
+
 .row-container,
 .title-row-container {
   margin-top: 8px;
@@ -20481,6 +20486,7 @@ body {
 
 .title-work-image {
   margin: 0;
+  margin-bottom: 5px;
 }
 
 .about-table {

@@ -7,6 +7,14 @@
 
     <div id="home">&nbsp;</div>
 
+    @if(null !== $titleResource)
+        <div class="title-row-container">
+            <div class="row" onclick="document.location='{{url($titleResource->name)}}';">
+                <img id="{!! $titleResource->id !!}" class="title-work-image" onmouseover="this.src='{!! $titleResource->titleThumbHover !!}'" onmouseout="this.src='{!! $titleResource->titleThumb !!}'" src="{!! $titleResource->titleThumb !!}" title="" alt="{!! $titleResource->name !!}" style="width: 100%">
+            </div>
+        </div>
+    @endif
+
     @if(count($resources)>0)
         <div class="row-container">
             <div class="row">

@@ -17,7 +17,7 @@
         <meta property="og:image" content="/img/thumbs/armstrong_hv.jpg">
         <meta property="og:description" content="Powerhouse Industries provide plugins and utilities to the masses">
 
-		<link href="{{ asset('css/site.css?v7') }}" rel="stylesheet">
+		<link href="{{ asset('css/site.css?v9') }}" rel="stylesheet">
         <script src="{{ asset('js/site.js?v7') }}"></script>
 
     @yield('styles')
@@ -49,7 +49,7 @@
     </div>
 
     <div class="row footer-row-container">
-        <div style="color: #fff; text-align: center;padding-top:80px;">&copy; {{ (new DateTime)->format('Y') }} Powerhouse Industries</div>
+        <div style="color: #000; text-align: center;padding-top:80px;">&copy; {{ (new DateTime)->format('Y') }} Powerhouse Industries</div>
     </div>
 
 </div>

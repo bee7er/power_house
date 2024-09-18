@@ -159,4 +159,8 @@
             }
         }
     </script>
+    <script>
+        /* Prevent the iframe from jumping up when clicked */
+        // <![CDATA[ document.addEventListener("DOMContentLoaded", function(){ scrollToAnchoro('top'); }, false )// ]]>
+    </script>
 @endsection
