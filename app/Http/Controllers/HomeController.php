@@ -52,6 +52,7 @@ class HomeController extends Controller
 				'resources.description',
 				'resources.titleThumb',
 				'resources.titleThumbHover',
+				'resources.useTitleThumbOnly',
 				'resources.thumb',
 				'resources.thumbHover',
 				'resources.useThumbHover',
@@ -95,18 +96,22 @@ class HomeController extends Controller
 				}
 			}
 
-			// Make sure we have an even number of entries, which is a factor of 3
-			$count = $resources->count();
+			// Not doing the following check as we now have entriesd which are used for the title only
+			// This makes the logic here tricky and is bound to cause problems
+			// Admin should ensure there are an even number of entries instead
 
-			$first = null;
-			$useImage = 0;
-			while (($count % 3) !== 0) {
-				$use = clone($resources->get($useImage));
-				$use['id'] = (9999 + $useImage);        // Dummy unique id
-				$resources = $resources->merge([$use]);
-				$count = $resources->count();
-				$useImage++;
-			}
+//			// Make sure we have an even number of entries, which is a factor of 3
+//			$count = $resources->count();
+//
+//			$first = null;
+//			$useImage = 0;
+//			while (($count % 3) !== 0) {
+//				$use = clone($resources->get($useImage));
+//				$use['id'] = (9999 + $useImage);        // Dummy unique id
+//				$resources = $resources->merge([$use]);
+//				$count = $resources->count();
+//				$useImage++;
+//			}
 		}
 
 		$notices = Notice::select(

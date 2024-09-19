@@ -10,6 +10,8 @@ return [
     'titleThumb' => 'Title image',
     'titleThumbHelp' => 'Used for the first resource only. Needs a hover image, too.',
     'titleThumbHover' => 'Title hover image',
+    'useTitleThumbOnly' => 'Use as the title thumb only',
+    'useTitleThumbOnlyHelp' => 'Displayed as the title image but not appearing in the set of works, 1=Yes, 0=No',
     'thumb' => 'Thumb image',
     'thumbHover' => 'Thumb hover image',
     'useThumbHover' => 'Use a hover image for the thumb image, 1=Yes, 0=No. Not used for MP4 thumb.',

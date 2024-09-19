@@ -74,6 +74,14 @@
                 <img src="{{url('/') . '/' . $resource->titleThumbHover}}" width="80">
             @endif
         </div>
+        <div class="form-group {{ $errors->has('useTitleThumbOnly') ? 'error' : '' }}">
+            <label class="control-label" for="useTitleThumbOnly">
+                {{ trans("admin/resource.useTitleThumbOnly") }}</label>
+            <div class="controls">
+                {!! Form::text('useTitleThumbOnly', null, array('class' => 'form-control')) !!}
+            </div>
+            <div class="thumb-help">{{ trans("admin/resource.useTitleThumbOnlyHelp") }}</div>
+        </div>
         <div class="form-group {{ $errors->has('thumb') ? 'error' : '' }}">
             <label class="control-label" for="thumb">
                 {{ trans("admin/resource.thumb") }}</label>
