@@ -1,16 +1,95 @@
-<body style="background-color: #001b8f;"/>
-<style>.template-credits-label {
-    color: #00daff;
-}</style>
-<div class="template-details-title">#TITLE#</div>
-<div id="video-panel" class="row template-row-container">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 video-frame-container">
-        <iframe id="video-frame" class="video-frame" src="#URL#" frameborder="0" webkitallowfullscreen
-                mozallowfullscreen allowfullscreen></iframe>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Warning Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .cookie-warning {
+            position: fixed;
+            bottom: -100px; /* hidden initially */
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            transition: bottom 0.5s ease; /* smooth slide-in effect */
+            z-index: 1000;
+        }
+
+        .cookie-warning.show {
+            bottom: 0; /* show when class is added */
+        }
+
+        .cookie-warning button {
+            background-color: #f44336; /* red background */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="cookie-warning" class="cookie-warning">
+    <p>This website uses cookies to ensure you get the best experience on our website.
+        <a href="#">Learn more</a>.
+    </p>
+    <button id="close-warning">Got it!</button>
 </div>
-#CONTENTS#
-<div class="template-credits-title">credits</div>
-<div class="row template-credits-row-container">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> #CREDITS#</div>
-</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        const cookieWarning = document.getElementById('cookie-warning');
+        const closeBtn = document.getElementById('close-warning');
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to check if a cookie exists
+        function checkCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length); // Trim whitespace
+                if (c.indexOf(nameEQ) == 0) return true; // Cookie found
+            }
+            return false; // Cookie not found
+        }
+
+        // Check if the cookie warning has been accepted
+        if (!checkCookie("cookieWarningAccepted")) {
+            // Show the cookie warning with a slide-in effect
+            setTimeout(function() {
+                cookieWarning.classList.add('show');
+        }, 500); // Delay before showing
+        }
+
+        // Hide the cookie warning when the button is clicked
+        closeBtn.addEventListener('click', function () {
+            cookieWarning.classList.remove('show');
+            // Optionally hide it after a short delay
+            setTimeout(function() {
+                cookieWarning.style.display = 'none';
+        }, 500); // Wait for the transition to end
+
+            // Set a cookie to remember that the user accepted the cookie warning
+            setCookie("cookieWarningAccepted", "true", 30); // Cookie expires in 30 days
+        });
+    });
+
+</script>
+</body>
+</html>

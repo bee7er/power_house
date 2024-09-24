@@ -52,10 +52,61 @@
         <div style="color: #000; text-align: center;padding-top:80px;">&copy; {{ (new DateTime)->format('Y') }} Powerhouse Industries</div>
     </div>
 
+    <div id="cookie-warning" class="cookie-warning">
+        <p>This website uses cookies to ensure you get the best experience on our website.
+        </p>
+        <button id="close-warning">Ok, got it!</button>
+    </div>
 </div>
 
 @yield('global-scripts')
 @yield('page-scripts')
 
+<script type="text/javascript">
+    // Delete the cookie for testing purposes
+    //document.cookie = "cookieWarningAccepted=; Max-Age=0; path=/;";
+    document.addEventListener("DOMContentLoaded", function () {
+        const cookieWarning = document.getElementById('cookie-warning');
+        const closeBtn = document.getElementById('close-warning');
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Function to check if a cookie exists
+        function checkCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length); // Trim whitespace
+                if (c.indexOf(nameEQ) == 0) return true; // Cookie found
+            }
+            return false; // Cookie not found
+        }
+
+        // Check if the cookie warning has been accepted
+        if (!checkCookie("cookieWarningAccepted")) {
+            // Show the cookie warning with a slide-in effect
+            setTimeout(function() {
+                cookieWarning.classList.add('show');
+            }, 500); // Delay before showing
+        }
+
+        // Hide the cookie warning when the button is clicked
+        closeBtn.addEventListener('click', function () {
+            cookieWarning.classList.remove('show');
+            // Optionally hide it after a short delay
+            setTimeout(function() {
+                cookieWarning.style.display = 'none';
+            }, 500); // Wait for the transition to end
+            // Set a cookie to remember that the user accepted the cookie warning
+            setCookie("cookieWarningAccepted", "true", 30); // Cookie expires in 30 days
+        });
+    });
+</script>
 </body>
 </html>
