@@ -20696,6 +20696,14 @@ p a:hover {
   cursor: pointer;
 }
 
+.control-label {
+  color: #fff;
+}
+
+.checkbox {
+  color: #fff;
+}
+
 /* Media queries */
 
 @media (max-width: 1200px) {
